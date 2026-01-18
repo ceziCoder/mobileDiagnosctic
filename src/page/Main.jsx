@@ -61,21 +61,44 @@ export const Main = () => {
     <>
 
 
+
       <div className="py-2 mx-5 flex justify-end items-start overflow-hidden " >
-        <div className="absolute top-20 left-30 transform -translate-x-1/2 z-10">
-        <h1 className="text-2xl  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
-       Mobilna   <ColourfulText text=" diagnostyka" />
+        <div className="fixed inset-0 -z-10">
+          <PixelatedCanvas
+            src={image9}
+            width={window.innerWidth}
+            height={window.innerHeight}
+            cellSize={4}
+            dotScale={0.8}
+            shape="attract"
+            backgroundColor="#000000"
+            dropoutStrength={0.1}
+            interactive
+            distortionStrength={0.3}
+            distortionRadius={200}
+            distortionMode="repel"
+            followSpeed={0.2}
+            jitterStrength={4}
+            jitterSpeed={1}
+            sampleAverage
+            objectFit="cover"
+            className="w-full h-full"
+          />
+        </div>
+        <div className="  flex justify-center items-center  z-10 ">
+        <h1 className="text-lg  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
+               <ColourfulText text="Mobilna diagnostyka samochodowa "   /> <br/>
           </h1>
         </div>
             <Modal>
 
               <ModalTrigger className="bg-transparent  dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
-                <Button borderRadius="1.5rem"
+                <Button borderRadius="1rem"
                   className="p-1 bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
                 >
                   <span className="group-hover/modal-btn:translate-x-40 text-center text-s transition duration-500 shadow-sm ">
 
-                      My toolkit
+                      Moje narzędzia
 
                   </span>
 
@@ -131,27 +154,7 @@ export const Main = () => {
 
           </div>
 
-      <div className="mx-auto mt-8 flex w-full items-center justify-center">
-        <PixelatedCanvas
-          src={img1}
-          width={800}
-          height={600}
-          cellSize={4}
-          dotScale={0.8}
-          shape=" attract"
-          backgroundColor="#0000000"
-          dropoutStrength={0.1}
-          interactive
-          distortionStrength={0.1}
-          distortionRadius={200}
-          distortionMode="repel"
-          followSpeed={0.2}
-          jitterStrength={4}
-          jitterSpeed={1}
-          sampleAverage
-          className="rounded-xl shadow-lg"
-        />
-      </div>
+
       </>
   )
 }

@@ -71,15 +71,15 @@ export const Main = () => {
             cellSize={4}
             dotScale={0.8}
             shape="attract"
-            backgroundColor="#000000"
+            backgroundColor="#333333"
             dropoutStrength={0.1}
             interactive
             distortionStrength={0.3}
-            distortionRadius={200}
-            distortionMode="repel"
-            followSpeed={0.2}
-            jitterStrength={4}
-            jitterSpeed={1}
+            distortionRadius={400}
+            distortionMode="swirl"
+            followSpeed={0.5}
+            jitterStrength={8}
+            jitterSpeed={4}
             sampleAverage
             objectFit="cover"
             className="w-full h-full"
@@ -128,7 +128,7 @@ export const Main = () => {
                           rotate: 0,
                           zIndex: 100,
                         }}
-                        className="rounded-xl mt-4 mr-40 md:-mr-4 p-1 mb-8 bg-white dark:bg-neutral-800 overflow-hidden max-w-full max-h-full"
+                        className="rounded-xl mt-4 mr-30 md:-mr-4 p-1 mb-8 bg-white dark:bg-neutral-800 overflow-hidden max-w-full max-h-full"
                       >
                         <img
                           src={image.src}

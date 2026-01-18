@@ -68,7 +68,7 @@ export const Main = () => {
             src={image9}
             width={window.innerWidth}
             height={window.innerHeight}
-            cellSize={4}
+            cellSize={3}
             dotScale={0.9}
             shape="square"
             backgroundColor="#000000"

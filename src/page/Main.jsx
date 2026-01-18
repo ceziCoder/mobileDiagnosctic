@@ -20,12 +20,13 @@ import image3 from '../public/3-.jpg';
 import image4 from '../public/5-.jpg';
 import image5 from '../public/7-.jpg';
 import image8 from '../public/8.jpg';
+import image9 from '../public/9.jpg';
 import { FaTools } from 'react-icons/fa';
 import { ColourfulText } from '../components/colourful-text.jsx';
 
 const images = [
   {
-    src: image1,
+    src: image9,
     description: "Launch",
   },
   {
@@ -47,7 +48,11 @@ const images = [
   {
     src: image8,
     description: "Xhorse",
-  }
+  },
+   {
+    src: image1,
+    description: "Launch",
+  },
 ];
 
 

@@ -69,20 +69,20 @@ export const Main = () => {
             width={window.innerWidth}
             height={window.innerHeight}
             cellSize={4}
-            dotScale={0.8}
-            shape="attract"
-            backgroundColor="#333333"
+            dotScale={0.9}
+            shape="square"
+            backgroundColor="#000000"
             dropoutStrength={0.1}
-            interactive
-            distortionStrength={0.3}
-            distortionRadius={400}
-            distortionMode="swirl"
-            followSpeed={0.5}
-            jitterStrength={8}
-            jitterSpeed={4}
-            sampleAverage
+            interactive={false}
+            distortionStrength={0.1}
+            distortionRadius={200}
+            distortionMode="repel"
+            followSpeed={0.2}
+            jitterStrength={4}
+            jitterSpeed={1}
+            sampleAverages
             objectFit="cover"
-            className="w-full h-full"
+            className="w-full h-full "
           />
         </div>
         <div className="  flex justify-center items-center  z-10 ">

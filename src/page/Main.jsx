@@ -93,7 +93,7 @@ export const Main = () => {
                           rotate: 0,
                           zIndex: 100,
                         }}
-                        className="rounded-xl -mr-4 mt-4 p-1 mb-8 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden "
+                        className="rounded-xl -mr-4 mt-4 p-1 mb-8 bg-white dark:bg-neutral-800 dark:border-neutral-800 border border-neutral-100 flex-shrink-0 overflow-hidden "
                       >
                         <img
                           src={image.src}

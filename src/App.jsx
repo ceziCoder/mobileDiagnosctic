@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Main }  from "./page/Main";
-import { ErrorPage } from "./page/errorpage";
+import { ErrorPage } from "./page/ErrorPage";
 
 export const App = () => {
   const shouldRedirect = true

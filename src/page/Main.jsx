@@ -21,6 +21,7 @@ import image4 from '../public/5-.jpg';
 import image5 from '../public/7-.jpg';
 import image8 from '../public/8.jpg';
 import { FaTools } from 'react-icons/fa';
+import { ColourfulText } from '../components/colourful-text.jsx';
 
 const images = [
   {
@@ -53,8 +54,14 @@ const images = [
 export const Main = () => {
   return (
     <>
-      <div className="py-2 px-4 sm:px-5 flex justify-center items-start w-full" >
 
+
+      <div className="py-2 mx-5 flex justify-end items-start overflow-hidden " >
+        <div className="absolute top-20 left-30 transform -translate-x-1/2 z-10">
+        <h1 className="text-2xl  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
+       Mobilna   <ColourfulText text=" diagnostyka" />
+          </h1>
+        </div>
             <Modal>
 
               <ModalTrigger className="bg-transparent  dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
@@ -89,7 +96,7 @@ export const Main = () => {
                           zIndex: 100,
                         }}
                         whileTap={{
-                          scale: 1.5,
+                          scale: 2.0,
                           rotate: 0,
                           zIndex: 100,
                         }}

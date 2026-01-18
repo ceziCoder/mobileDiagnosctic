@@ -80,7 +80,7 @@ export const Main = () => {
                 </Button>
               </ModalTrigger>
               <ModalBody>
-                <ModalContent className="overflow-hidden max-h-[100%]  ">
+                <ModalContent className="overflow-auto h-[100%]  ">
 
               <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-2 w-full px-2 sm:px-0">
 

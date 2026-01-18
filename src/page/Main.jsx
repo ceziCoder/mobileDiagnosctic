@@ -80,7 +80,7 @@ export const Main = () => {
                 </Button>
               </ModalTrigger>
               <ModalBody>
-                <ModalContent className="overflow-hidden max-h-[100vh]  ">
+                <ModalContent className="overflow-hidden max-h-[100%]  ">
 
               <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-2 w-full px-2 sm:px-0">
 
@@ -100,7 +100,7 @@ export const Main = () => {
                           rotate: 0,
                           zIndex: 100,
                         }}
-                        className="rounded-xl mt-4 mr-40 md:-mr-4 p-1 mb-8 bg-white dark:bg-neutral-800 overflow-hidden max-w-full"
+                        className="rounded-xl mt-4 mr-40 md:-mr-4 p-1 mb-8 bg-white dark:bg-neutral-800 overflow-hidden max-w-full max-h-full"
                       >
                         <img
                           src={image.src}

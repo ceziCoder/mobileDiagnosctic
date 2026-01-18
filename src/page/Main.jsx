@@ -53,7 +53,7 @@ const images = [
 export const Main = () => {
   return (
     <>
-      <div className="py-2 mx-5 flex justify-end items-start overflow-hidden "  >
+      <div className="py-2 px-4 sm:px-5 flex justify-center items-start w-full" >
 
             <Modal>
 
@@ -73,9 +73,9 @@ export const Main = () => {
                 </Button>
               </ModalTrigger>
               <ModalBody>
-                <ModalContent className="overflow-auto max-h-[100vh]  ">
+                <ModalContent className="overflow-hidden max-h-[100vh]  ">
 
-              <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-2">
+              <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-2 w-full px-2 sm:px-0">
 
                     {images.map((image, idx) => (
                       <motion.div
@@ -84,16 +84,16 @@ export const Main = () => {
                           rotate: Math.random() * 20 + 12,
                         }}
                         whileHover={{
-                          scale: 2.0,
+                          scale: 1.5,
                           rotate: 0,
                           zIndex: 100,
                         }}
                         whileTap={{
-                          scale: 1.8,
+                          scale: 1.5,
                           rotate: 0,
                           zIndex: 100,
                         }}
-                        className="rounded-xl mt-4 sm:-mr-4 p-1 mb-8 bg-white dark:bg-neutral-800 dark:border-neutral-800 border border-neutral-100 flex-shrink-0 overflow-hidden "
+                        className="rounded-xl mt-4 mr-40 md:-mr-4 p-1 mb-8 bg-white dark:bg-neutral-800 overflow-hidden max-w-full"
                       >
                         <img
                           src={image.src}

@@ -89,7 +89,7 @@ export const ModalBody = ({
             ref={modalRef}
             className={cn(
 
-              "relative z-50 min-h-[100%] max-h-[100%] md:max-w-[70%] bg-white ... flex flex-col flex-1 overflow-hidden mt-[115px]",
+              "relative z-50 min-h-[100%] max-h-[100%] md:max-w-[70%] bg-white ... flex flex-col flex-1 overflow-hidden mt-[115px] rounded-xl",
 
               className,
 
@@ -165,7 +165,7 @@ const Overlay = ({
         opacity: 0,
         backdropFilter: "blur(0px)",
       }}
-      className={`fixed inset-0 h-full w-full bg-black  bg-opacity-50 z-40 pointer-events-auto ${className}`}></motion.div>
+      className={`fixed inset-0 h-full w-full bg-black  bg-opacity-50 z-40 pointer-events-auto  ${className}`}></motion.div>
   );
 };
 

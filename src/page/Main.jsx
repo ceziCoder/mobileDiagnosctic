@@ -23,6 +23,7 @@ import image8 from '../public/8.jpg';
 import image9 from '../public/9.jpg';
 import { FaTools } from 'react-icons/fa';
 import { ColourfulText } from '../components/colourful-text.jsx';
+import { NoiseBackground } from "../components/noise-background.jsx";
 
 const images = [
   {
@@ -62,6 +63,7 @@ export const Main = () => {
 
 
 
+
       <div className="py-2 mx-5 flex justify-end items-start overflow-hidden " >
         <div className="fixed inset-0 -z-10">
           <PixelatedCanvas
@@ -85,32 +87,39 @@ export const Main = () => {
             className="w-full h-full "
           />
         </div>
-        <div className="  flex justify-center items-center  z-10 ">
+        <div className="  flex justify-center items-center  z-10  ">
         <h1 className="text-lg  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
                <ColourfulText text="Mobilna diagnostyka samochodowa "   /> <br/>
           </h1>
         </div>
             <Modal>
 
-              <ModalTrigger className="bg-transparent  dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
-                <Button borderRadius="1rem"
-                  className="p-1 bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-                >
-                  <span className="group-hover/modal-btn:translate-x-40 text-center text-s transition duration-500 shadow-sm ">
+            <ModalTrigger className="bg-transparent  dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
 
-                      Moje narzędzia
+            <div className="flex justify-center">
+              <NoiseBackground
+                containerClassName="w-30 h-15 md:p-4 rounded-full mx-auto"
+                noiseIntensity={0.01}
+                speed={0.4}
+                backdropBlur={true}
+                animating={true}
+                gradientColors={[
+                  "rgb(255, 10, 150)",
+                  "rgb(100, 150, 255)",
+                  "rgb(255, 200, 100)",
+                ]}
+              >
+                <button className="h-full w-full cursor-pointer rounded-full bg-linear-to-r from-neutral-100 via-neutral-100 to-white px-4 py-2 text-black shadow-[0px_2px_0px_0px_var(--color-neutral-50)_inset,0px_0.5px_1px_0px_var(--color-neutral-400)] transition-all duration-100 active:scale-98 dark:from-black dark:via-black dark:to-neutral-900 dark:text-white dark:shadow-[0px_1px_0px_0px_var(--color-neutral-950)_inset,0px_1px_0px_0px_var(--color-neutral-800)]">
+                  moje narzedzia &rarr;
+                </button>
+              </NoiseBackground>
+            </div>
 
-                  </span>
-
-                <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute top-0  transition duration-500 text-white z-20">
-                  <FaTools size={25} color="black" style={{marginTop: '8px'}}/>
-                  </div>
-                </Button>
               </ModalTrigger>
               <ModalBody>
                 <ModalContent className="overflow-auto h-[100%]  ">
 
-              <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-2 w-full px-2 sm:px-0">
+              <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-2 w-full px-2 sm:px-0 ">
 
                     {images.map((image, idx) => (
                       <motion.div
@@ -158,3 +167,41 @@ export const Main = () => {
       </>
   )
 }
+
+{/*
+
+
+
+               <Button borderRadius="1rem"
+                  className="p-1 bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+                >
+                  <span className="group-hover/modal-btn:translate-x-40 text-center text-s transition duration-500 shadow-sm ">
+
+                      Moje narzędzia
+
+                  </span>
+
+                <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute top-0  transition duration-500 text-white z-20">
+                  <FaTools size={25} color="black" style={{marginTop: '8px'}}/>
+                  </div>
+                </Button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  */ }

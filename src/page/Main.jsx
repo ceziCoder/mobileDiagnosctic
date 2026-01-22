@@ -6,6 +6,9 @@ import { BackgroundGradientAnimation } from "../components/background-gradient-a
 import { VortexDemoSecond } from "../components/vortex"
 import { PixelatedCanvas } from "../components/pixelated-canvas"
 import img1 from '../public/7-.jpg'
+import React from 'react';
+import { useMemo } from "react";
+
 import {
   Modal,
   ModalBody,
@@ -24,6 +27,32 @@ import image9 from '../public/9.jpg';
 import { FaTools } from 'react-icons/fa';
 import { ColourfulText } from '../components/colourful-text.jsx';
 import { NoiseBackground } from "../components/noise-background.jsx";
+
+
+const DTC_CODES = [
+  "P0100", "P0101", "P0171", "P0172",
+  "P0300", "P0301", "P0401",
+  "P0420", "P0500",
+  "P0562", "P0606",
+  "U0100", "U0121",
+];
+
+const useRandomDTC = (count = 30) => {
+  return useMemo(() => {
+    return Array.from({ length: count }).map((_, i) => ({
+      id: i,
+      code: DTC_CODES[Math.floor(Math.random() * DTC_CODES.length)],
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      rotate: Math.random() * 40 - 20,
+      opacity: Math.random() * 0.4 + 0.3,
+      scale: Math.random() * 0.6 + 0.6,
+    }));
+  }, []);
+};
+
+
+
 
 const images = [
   {
@@ -58,6 +87,8 @@ const images = [
 
 
 export const Main = () => {
+
+  const dtcItems = useRandomDTC(40);
   return (
     <>
 
@@ -86,6 +117,31 @@ export const Main = () => {
             objectFit="cover"
             className="w-full h-full "
           />
+        </div>
+        <div className="fixed inset-0 -z-5 pointer-events-none overflow-hidden">
+          {dtcItems.map(item => (
+            <motion.div
+              key={item.id}
+              className="absolute font-mono text-xs md:text-sm text-white/70 dark:text-white/50"
+              style={{
+                top: `${item.top}%`,
+                left: `${item.left}%`,
+                rotate: item.rotate,
+                opacity: item.opacity,
+                scale: item.scale,
+              }}
+              animate={{
+                y: [0, -20, 0],
+              }}
+              transition={{
+                duration: 6 + Math.random() * 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              {item.code}
+            </motion.div>
+          ))}
         </div>
         <div className="  flex justify-center items-center  z-10  ">
         <h1 className="text-lg  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
@@ -123,7 +179,7 @@ export const Main = () => {
                   dark:text-white
                   dark:shadow-[0px_1px_0px_0px_var(--color-neutral-950)_inset,0px_1px_0px_0px_var(--color-neutral-800)]
                   ">
-                   narzedzia 
+                   narzedzia
                 </button>
               </NoiseBackground>
             </div>

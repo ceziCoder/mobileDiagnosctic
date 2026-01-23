@@ -32,7 +32,7 @@ function GradientLayer({
   );
 }
 
-export const NoiseBackground = ({
+export const NoiseBackground1 = ({
   children,
   className,
   containerClassName,

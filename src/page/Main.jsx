@@ -26,8 +26,9 @@ import image8 from '../public/8.jpg';
 import image9 from '../public/9.jpg';
 import { FaTools } from 'react-icons/fa';
 import { ColourfulText } from '../components/colourful-text.jsx';
-import { NoiseBackground } from "../components/noise-background.jsx";
-
+import { NoiseBackground1 } from "../components/noise-background1.jsx";
+import { NoiseBackground2 } from "../components/noise-background2.jsx";
+import { HoverBorderGradient } from '../components/hover-border-gradient.jsx';
 
 const DTC_CODES = [
   "P0100", "P0101", "P0171", "P0172",
@@ -94,7 +95,7 @@ export const Main = () => {
 
 
 
-      <div className="relative  min-h-screen w-full flex flex-col items-center overflow-x-hidden">
+      <div className="relative  min-h-screen w-full flex flex-col items-start overflow-x-hidden">
 
 
         <div className="fixed inset-0 -z-10">
@@ -158,7 +159,7 @@ export const Main = () => {
           <ModalTrigger className="bg-transparent  dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
 
             <div className="flex  justify-center">
-              <NoiseBackground
+              <NoiseBackground1
                 containerClassName="w-fit   md:p-4 rounded-full "
                 noiseIntensity={0.01}
                 speed={0.4}
@@ -186,7 +187,7 @@ export const Main = () => {
                   ">
                   narzedzia
                 </button>
-              </NoiseBackground>
+              </NoiseBackground1>
             </div>
 
           </ModalTrigger>
@@ -218,7 +219,7 @@ export const Main = () => {
                       alt=""
                       width="800"
                       height="800"
-                      className="rounded-lg h-[12rem] w-[12rem] md:h-40 md:w-40 object-cover flex-shrink-0"
+                      className="rounded-lg h-[12rem] w-[12rem] md:h-40 md:w-40 object-cover flex-shrink-0 select-none pointer-events-none"
                     />
                     <h6 className="text-neutral-700 dark:text-neutral-300 text-center mt-2 text-sm">
                       {image.description}
@@ -229,20 +230,24 @@ export const Main = () => {
 
             </ModalContent>
           </ModalBody>
-
           <Modal>
             <ModalTrigger className="bg-transparent dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
-              <NoiseBackground
+              <div className='flex justify-center'>
+              <NoiseBackground2
                 containerClassName="w-fit md:p-4 rounded-full"
-                noiseIntensity={0.01}
-                speed={0.4}
+                noiseIntensity={0.02}
+                speed={0.2}
                 backdropBlur={true}
                 animating={true}
               >
-                <button className="rounded-full px-4 py-2 text-sm sm:text-base bg-white text-black dark:bg-black dark:text-white">
+                  <button className="   h-full w-full cursor-pointer
+                  rounded-full
+                  px-5 sm:px-6 py-1 text-sm
+                   sm:py-2 sm:text-base  bg-black/50 text-white dark:bg-black dark:text-white">
                   Usługa
                 </button>
-              </NoiseBackground>
+              </NoiseBackground2>
+              </div>
             </ModalTrigger>
 
             <ModalBody className="overflow-hidden">
@@ -308,7 +313,7 @@ export const Main = () => {
                         </p>
                       </div>
 
-                      <p className="text-center text-sm pt-4 text-white/60">
+                      <p className="text-center text-xs pt-4 text-white/60">
                         Diagnostyka to analiza danych – nie zgadywanie.
                       </p>
 

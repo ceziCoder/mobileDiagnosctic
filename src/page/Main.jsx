@@ -150,7 +150,7 @@ export const Main = () => {
         </div>
 
         <div className="  flex justify-center items-center  z-10  ">
-          <h1 className="text-lg  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
+          <h1 className="text-lg m-2  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
             <ColourfulText text="Mobilna diagnostyka samochodowa " /> <br />
           </h1>
         </div>
@@ -313,8 +313,8 @@ export const Main = () => {
                         </p>
                       </div>
 
-                      <p className="text-center text-xs pt-4 text-white/60">
-                        Diagnostyka to analiza danych – nie zgadywanie.
+                      <p className="text-center text-md pt-4 text-red-400">
+                        Diagnostyka to analiza danych – nie zgadywanie !!!!!!.
                       </p>
 
                     </div>

@@ -231,7 +231,7 @@ export const Main = () => {
               </ModalBody>
 
         </Modal>
-        <div className="relative z-10 max-w-4xl mx-auto  px-6 py-6
+        <div className="relative z-20 max-w-4xl mx-auto  px-6 py-6
   rounded-2xl
   bg-black/60 backdrop-blur-lg
   border border-white/10

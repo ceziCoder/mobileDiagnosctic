@@ -94,8 +94,9 @@ export const Main = () => {
 
 
 
+      <div className="py-2 mx-5 flex flex-col items-center overflow-auto max-h-full">
 
-      <div className="py-2 mx-5 flex justify-end items-start overflow-hidden " >
+
         <div className="fixed inset-0 -z-10">
           <PixelatedCanvas
             src={image9}
@@ -118,6 +119,9 @@ export const Main = () => {
             className="w-full h-full "
           />
         </div>
+
+
+
         <div className="fixed inset-0 -z-5 pointer-events-none overflow-hidden">
           {dtcItems.map(item => (
             <motion.div
@@ -143,6 +147,7 @@ export const Main = () => {
             </motion.div>
           ))}
         </div>
+
         <div className="  flex justify-center items-center  z-10  ">
         <h1 className="text-lg  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
                <ColourfulText text="Mobilna diagnostyka samochodowa "   /> <br/>
@@ -225,12 +230,88 @@ export const Main = () => {
                 </ModalContent>
               </ModalBody>
 
-            </Modal>
-            <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+        </Modal>
+        <div className="relative z-10 max-w-4xl mx-auto  px-6 py-6
+  rounded-2xl
+  bg-black/60 backdrop-blur-md
+  border border-white/10
+  text-white font-sans">
 
-              </div>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">
+            Diagnostyka komputerowa – odczyt błędów i parametrów rzeczywistych
+          </h2>
+
+          <p className="text-sm md:text-base text-white/80 mb-4 text-center">
+            Mobilna diagnostyka samochodowa oparta na realnych danych z ECU, a nie zgadywaniu i wymianie części na ślepo.
+          </p>
+
+          <div className="space-y-4 text-sm md:text-base text-white/85">
+
+            <div>
+              <h3 className="font-semibold text-white mb-1">
+                Zakres usługi (etap początkowy):
+              </h3>
+              <ul className="list-disc list-inside space-y-1 text-white/80">
+                <li>odczyt błędów sterownika silnika (ECU)</li>
+                <li>kasowanie błędów – jeśli usterka na to pozwala</li>
+                <li>podgląd parametrów rzeczywistych podczas pracy silnika</li>
+                <li>wstępna analiza i wskazanie możliwej przyczyny problemu</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-white mb-1">
+                Czym są parametry rzeczywiste?
+              </h3>
+              <p className="text-white/80">
+                Są to dane odczytywane na żywo przez sterownik silnika, m.in. korekty paliwowe,
+                lambda, przepływ powietrza (MAF), ciśnienie w kolektorze (MAP),
+                temperatury, kąt zapłonu i pozycja przepustnicy.
+                Ich analiza bardzo często pozwala znaleźć usterkę nawet wtedy,
+                gdy w sterowniku nie ma zapisanych błędów.
+              </p>
+            </div>
+
+            <div className="border-t border-white/10 pt-4">
+              <h3 className="font-semibold text-white mb-1">
+                Przykład diagnostyki – wysoka lambda, ECU podaje dużo paliwa
+              </h3>
+
+              <p className="text-white/80 mb-2">
+                <span className="font-semibold text-white">Objawy w parametrach:</span><br />
+                – wysokie korekty paliwowe (np. +20–30%)<br />
+                – lambda wskazuje mieszankę ubogą<br />
+                – ECU wydłuża czas wtrysku
+              </p>
+
+              <p className="text-white/80 mb-2">
+                <span className="font-semibold text-white">Co to oznacza:</span><br />
+                Sterownik „widzi” za dużo tlenu w spalinach, więc próbuje skorygować mieszankę,
+                dodając coraz więcej paliwa.
+              </p>
+
+              <p className="text-white/80">
+                <span className="font-semibold text-white">Możliwe przyczyny:</span><br />
+                – nieszczelność dolotu (lewe powietrze)<br />
+                – zaniżony odczyt przepływomierza MAF<br />
+                – uszkodzona lub zakłamująca sonda lambda<br />
+                – nieszczelny wydech przed sondą<br />
+                – zbyt niskie ciśnienie paliwa
+              </p>
+            </div>
+
+            <p className="text-center text-white/70 text-xs pt-4">
+              Diagnostyka to analiza danych – nie zgadywanie i niepotrzebna wymiana części.
+            </p>
 
           </div>
+        </div>
+
+
+
+          </div>
+
+
 
 
       </>
@@ -238,6 +319,33 @@ export const Main = () => {
 }
 
 {/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+
+      </div>
+
+
+
+
+
+
+
+
+
+
 
 
 

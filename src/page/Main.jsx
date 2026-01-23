@@ -278,7 +278,7 @@ export const Main = () => {
                           Zakres usługi (etap początkowy)
                         </h3>
                         <ul className="list-disc list-inside space-y-1 text-white/80">
-                          <li><span className="text-white">Odczyt błędów</span> ECU</li>
+                          <li><span className="text-white">Odczyt błędów</span> ECU= 50zl</li>
                           <li><span className="text-white">Kasowanie błędów</span></li>
                           <li><span className="text-white">Parametry rzeczywiste</span></li>
                           <li><span className="text-white">Wstępna analiza</span></li>
@@ -312,6 +312,9 @@ export const Main = () => {
                           Najczęściej dolot, MAF lub ciśnienie paliwa – nie sonda.
                         </p>
                       </div>
+                      <h3 className="font-semibold mb-3 text-purple-100">
+                        kontakt : mobilnadiagnostyka@zoho.eu
+                      </h3>
 
                       <p className="text-center text-md pt-4 text-red-400">
                         Diagnostyka to analiza danych – nie zgadywanie !!!!!!.

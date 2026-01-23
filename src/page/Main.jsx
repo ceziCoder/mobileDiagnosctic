@@ -231,82 +231,95 @@ export const Main = () => {
               </ModalBody>
 
         </Modal>
-        <div className="relative z-20 max-w-4xl mx-auto  px-6 py-6
-  rounded-2xl
-  bg-black/30
-  border border-white/10
-  text-white font-sans">
+        <div className="relative z-20 max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10">
 
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">
-            Diagnostyka komputerowa – odczyt błędów i parametrów rzeczywistych
-          </h2>
+          {/* WARSTWA TŁA */}
+          <div className="absolute inset-0 bg-black opacity-60 pointer-events-none" />
 
-          <p className="text-sm md:text-base text-white/80 mb-4 text-center">
-            Mobilna diagnostyka samochodowa oparta na realnych danych z ECU, a nie zgadywaniu i wymianie części na ślepo.
-          </p>
+          {/* TREŚĆ */}
+          <div className="relative px-6 py-6 text-white font-sans">
 
-          <div className="space-y-4 text-sm md:text-base text-white/85">
+            {/* GŁÓWNY NAGŁÓWEK */}
+            <h2 className="
+      text-2xl md:text-3xl font-extrabold mb-4 text-center
+      bg-gradient-to-r from-cyan-100 via-blue-100 to-purple-300
+      bg-clip-text text-transparent
+    ">
+              Diagnostyka komputerowa – odczyt błędów i parametrów rzeczywistych
+            </h2>
 
-            <div>
-              <h3 className="font-semibold text-white mb-1">
-                Zakres usługi (etap początkowy):
-              </h3>
-              <ul className="list-disc list-inside space-y-1 text-white/80">
-                <li>odczyt błędów sterownika silnika (ECU)</li>
-                <li>kasowanie błędów – jeśli usterka na to pozwala</li>
-                <li>podgląd parametrów rzeczywistych podczas pracy silnika</li>
-                <li>wstępna analiza i wskazanie możliwej przyczyny problemu</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold text-white mb-1">
-                Czym są parametry rzeczywiste?
-              </h3>
-              <p className="text-white/80">
-                Są to dane odczytywane na żywo przez sterownik silnika, m.in. korekty paliwowe,
-                lambda, przepływ powietrza (MAF), ciśnienie w kolektorze (MAP),
-                temperatury, kąt zapłonu i pozycja przepustnicy.
-                Ich analiza bardzo często pozwala znaleźć usterkę nawet wtedy,
-                gdy w sterowniku nie ma zapisanych błędów.
-              </p>
-            </div>
-
-            <div className="border-t border-white/10 pt-4">
-              <h3 className="font-semibold text-white mb-1">
-                Przykład diagnostyki – wysoka lambda, ECU podaje dużo paliwa
-              </h3>
-
-              <p className="text-white/80 mb-2">
-                <span className="font-semibold text-white">Objawy w parametrach:</span><br />
-                – wysokie korekty paliwowe (np. +20–30%)<br />
-                – lambda wskazuje mieszankę ubogą<br />
-                – ECU wydłuża czas wtrysku
-              </p>
-
-              <p className="text-white/80 mb-2">
-                <span className="font-semibold text-white">Co to oznacza:</span><br />
-                Sterownik „widzi” za dużo tlenu w spalinach, więc próbuje skorygować mieszankę,
-                dodając coraz więcej paliwa.
-              </p>
-
-              <p className="text-white/80">
-                <span className="font-semibold text-white">Możliwe przyczyny:</span><br />
-                – nieszczelność dolotu (lewe powietrze)<br />
-                – zaniżony odczyt przepływomierza MAF<br />
-                – uszkodzona lub zakłamująca sonda lambda<br />
-                – nieszczelny wydech przed sondą<br />
-                – zbyt niskie ciśnienie paliwa
-              </p>
-            </div>
-
-            <p className="text-center text-white/70 text-xs pt-4">
-              Diagnostyka to analiza danych – nie zgadywanie i niepotrzebna wymiana części.
+            {/* LEAD */}
+            <p className="text-sm md:text-base text-white/80 mb-6 text-center">
+              Mobilna diagnostyka samochodowa oparta na{" "}
+              <span className="text-cyan-300 font-semibold">realnych danych z ECU</span>,
+              a nie zgadywaniu i wymianie części na ślepo.
             </p>
 
+            <div className="space-y-6 text-sm md:text-base text-white/85">
+
+              {/* ZAKRES */}
+              <div>
+                <h3 className="font-semibold mb-2 flex items-center gap-2 text-cyan-300">
+                  <span className="w-2 h-2 rounded-full bg-cyan-400" />
+                  Zakres usługi (etap początkowy)
+                </h3>
+
+                <ul className="list-disc list-inside space-y-1 text-white/80">
+                  <li><span className="text-white">Odczyt błędów</span> sterownika silnika (ECU)</li>
+                  <li><span className="text-white">Kasowanie błędów</span> – jeśli usterka na to pozwala</li>
+                  <li><span className="text-white">Parametry rzeczywiste</span> podczas pracy silnika</li>
+                  <li><span className="text-white">Wstępna analiza</span> możliwej przyczyny problemu</li>
+                </ul>
+              </div>
+
+              {/* PARAMETRY */}
+              <div>
+                <h3 className="font-semibold mb-2 flex items-center gap-2 text-blue-300">
+                  <span className="w-2 h-2 rounded-full bg-blue-400" />
+                  Czym są parametry rzeczywiste?
+                </h3>
+
+                <p className="text-white/80">
+                  Są to dane odczytywane na żywo przez sterownik silnika, takie jak{" "}
+                  <span className="text-blue-300 font-semibold">korekty paliwowe</span>,{" "}
+                  <span className="text-blue-300 font-semibold">lambda</span>,{" "}
+                  <span className="text-blue-300 font-semibold">MAF</span>,{" "}
+                  <span className="text-blue-300 font-semibold">MAP</span>, temperatura,
+                  kąt zapłonu i pozycja przepustnicy.
+                </p>
+              </div>
+
+              {/* PRZYKŁAD */}
+              <div className="border-t border-white/10 pt-5">
+                <h3 className="font-semibold mb-3 flex items-center gap-2 text-purple-300">
+                  <span className="w-2 h-2 rounded-full bg-purple-400" />
+                  Przykład diagnostyki – wysoka lambda
+                </h3>
+
+                <p className="text-white/80 mb-3">
+                  <span className="text-purple-300 font-semibold">Objawy w parametrach:</span><br />
+                  – <span className="text-white">wysokie korekty paliwowe</span><br />
+                  – mieszanka uboga<br />
+                  – ECU wydłuża czas wtrysku
+                </p>
+
+                <p className="text-white/80">
+                  <span className="text-purple-300 font-semibold">Wniosek diagnostyczny:</span><br />
+                  Sterownik kompensuje problem, który bardzo często nie leży w sondzie,
+                  lecz w <span className="text-white">dolocie</span>,
+                  <span className="text-white"> MAF</span> lub
+                  <span className="text-white"> ciśnieniu paliwa</span>.
+                </p>
+              </div>
+
+              {/* STOPKA */}
+              <p className="text-center text-xs pt-4 text-white/60">
+                Diagnostyka to analiza danych – nie zgadywanie i niepotrzebna wymiana części.
+              </p>
+
+            </div>
           </div>
         </div>
-
 
 
           </div>

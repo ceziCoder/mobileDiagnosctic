@@ -94,7 +94,7 @@ export const Main = () => {
 
 
 
-      <div className="py-0 mx-6 flex flex-col items-center overflow-auto max-h-full">
+      <div className="py-0 mx-6 flex flex-col items-center overflow-hidden max-h-full">
 
 
         <div className="fixed inset-0 -z-10">

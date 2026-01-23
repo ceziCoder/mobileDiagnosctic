@@ -79,7 +79,7 @@ const images = [
     src: image8,
     description: "Xhorse",
   },
-   {
+  {
     src: image1,
     description: "Launch",
   },
@@ -149,13 +149,13 @@ export const Main = () => {
         </div>
 
         <div className="  flex justify-center items-center  z-10  ">
-        <h1 className="text-lg  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
-               <ColourfulText text="Mobilna diagnostyka samochodowa "   /> <br/>
+          <h1 className="text-lg  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
+            <ColourfulText text="Mobilna diagnostyka samochodowa " /> <br />
           </h1>
         </div>
-            <Modal>
+        <Modal>
 
-            <ModalTrigger className="bg-transparent  dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
+          <ModalTrigger className="bg-transparent  dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
 
             <div className="flex  justify-center">
               <NoiseBackground
@@ -184,150 +184,151 @@ export const Main = () => {
                   dark:text-white
                   dark:shadow-[0px_1px_0px_0px_var(--color-neutral-950)_inset,0px_1px_0px_0px_var(--color-neutral-800)]
                   ">
-                   narzedzia
+                  narzedzia
                 </button>
               </NoiseBackground>
             </div>
 
-              </ModalTrigger>
-              <ModalBody>
-                <ModalContent className="overflow-auto h-[100%]  ">
+          </ModalTrigger>
+          <ModalBody>
+            <ModalContent className="overflow-auto h-[100%]  ">
 
               <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mt-2 w-full px-2 sm:px-0 ">
 
-                    {images.map((image, idx) => (
-                      <motion.div
-                        key={"images" + idx}
-                        style={{
-                          rotate: Math.random() * 20 + 12,
-                        }}
-                        whileHover={{
-                          scale: 1.5,
-                          rotate: 0,
-                          zIndex: 100,
-                        }}
-                        whileTap={{
-                          scale: 2.0,
-                          rotate: 0,
-                          zIndex: 100,
-                        }}
-                        className="rounded-xl mt-4 mr-30 md:-mr-4 p-1 mb-8 bg-white dark:bg-neutral-800 overflow-hidden max-w-full max-h-full"
-                      >
-                        <img
-                          src={image.src}
-                          alt=""
-                          width="800"
-                          height="800"
-                          className="rounded-lg h-[12rem] w-[12rem] md:h-40 md:w-40 object-cover flex-shrink-0"
-                        />
-                        <h6 className="text-neutral-700 dark:text-neutral-300 text-center mt-2 text-sm">
-                          {image.description}
-                        </h6>
-                      </motion.div>
-                    ))}
+                {images.map((image, idx) => (
+                  <motion.div
+                    key={"images" + idx}
+                    style={{
+                      rotate: Math.random() * 20 + 12,
+                    }}
+                    whileHover={{
+                      scale: 1.5,
+                      rotate: 0,
+                      zIndex: 100,
+                    }}
+                    whileTap={{
+                      scale: 2.0,
+                      rotate: 0,
+                      zIndex: 100,
+                    }}
+                    className="rounded-xl mt-4 mr-30 md:-mr-4 p-1 mb-8 bg-white dark:bg-neutral-800 overflow-hidden max-w-full max-h-full"
+                  >
+                    <img
+                      src={image.src}
+                      alt=""
+                      width="800"
+                      height="800"
+                      className="rounded-lg h-[12rem] w-[12rem] md:h-40 md:w-40 object-cover flex-shrink-0"
+                    />
+                    <h6 className="text-neutral-700 dark:text-neutral-300 text-center mt-2 text-sm">
+                      {image.description}
+                    </h6>
+                  </motion.div>
+                ))}
+              </div>
+
+            </ModalContent>
+          </ModalBody>
+
+          <Modal>
+            <ModalTrigger className="bg-transparent dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
+              <NoiseBackground
+                containerClassName="w-fit md:p-4 rounded-full"
+                noiseIntensity={0.01}
+                speed={0.4}
+                backdropBlur={true}
+                animating={true}
+              >
+                <button className="rounded-full px-4 py-2 text-sm sm:text-base bg-white text-black dark:bg-black dark:text-white">
+                  Usługa
+                </button>
+              </NoiseBackground>
+            </ModalTrigger>
+
+            <ModalBody className="overflow-hidden">
+              <ModalContent className="max-h-[90vh] overflow-y-auto px-4 py-6">
+
+                {/* KARTA */}
+                <div className="max-w-4xl mx-auto rounded-2xl border border-white/10 bg-black/60 backdrop-blur-sm">
+
+                  <div className="px-6 py-6 text-white font-sans">
+
+                    <h2 className="
+            text-2xl md:text-3xl font-extrabold mb-4 text-center
+            bg-gradient-to-r from-cyan-100 via-blue-100 to-purple-300
+            bg-clip-text text-transparent">
+                      Diagnostyka komputerowa – odczyt błędów i parametrów rzeczywistych
+                    </h2>
+
+                    <p className="text-sm md:text-base text-white/80 mb-6 text-center">
+                      Mobilna diagnostyka samochodowa oparta na{" "}
+                      <span className="text-cyan-300 font-semibold">realnych danych z ECU</span>,
+                      a nie zgadywaniu i wymianie części na ślepo.
+                    </p>
+
+                    <div className="space-y-6 text-sm md:text-base text-white/85">
+
+                      <div>
+                        <h3 className="font-semibold mb-2 text-cyan-300">
+                          Zakres usługi (etap początkowy)
+                        </h3>
+                        <ul className="list-disc list-inside space-y-1 text-white/80">
+                          <li><span className="text-white">Odczyt błędów</span> ECU</li>
+                          <li><span className="text-white">Kasowanie błędów</span></li>
+                          <li><span className="text-white">Parametry rzeczywiste</span></li>
+                          <li><span className="text-white">Wstępna analiza</span></li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h3 className="font-semibold mb-2 text-blue-300">
+                          Czym są parametry rzeczywiste?
+                        </h3>
+                        <p className="text-white/80">
+                          Dane live z ECU: korekty paliwowe, lambda, MAF, MAP,
+                          temperatura, kąt zapłonu i pozycja przepustnicy.
+                        </p>
+                      </div>
+
+                      <div className="border-t border-white/10 pt-5">
+                        <h3 className="font-semibold mb-3 text-purple-300">
+                          Przykład diagnostyki – wysoka lambda
+                        </h3>
+
+                        <p className="text-white/80 mb-3">
+                          <span className="font-semibold text-purple-300">Objawy:</span><br />
+                          – wysokie korekty paliwowe<br />
+                          – mieszanka uboga<br />
+                          – ECU wydłuża wtrysk
+                        </p>
+
+                        <p className="text-white/80">
+                          <span className="font-semibold text-purple-300">Wniosek:</span><br />
+                          Najczęściej dolot, MAF lub ciśnienie paliwa – nie sonda.
+                        </p>
+                      </div>
+
+                      <p className="text-center text-sm pt-4 text-white/60">
+                        Diagnostyka to analiza danych – nie zgadywanie.
+                      </p>
+
+                    </div>
                   </div>
+                </div>
 
-                </ModalContent>
-              </ModalBody>
-
+              </ModalContent>
+            </ModalBody>
+          </Modal>
         </Modal>
-        <div className="relative z-20 max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/10">
-
-          {/* WARSTWA TŁA */}
-          <div className="absolute inset-0 bg-black opacity-60 pointer-events-none" />
-
-          {/* TREŚĆ */}
-          <div className="relative px-6 py-6 text-white font-sans">
-
-            {/* GŁÓWNY NAGŁÓWEK */}
-            <h2 className="
-      text-2xl md:text-3xl font-extrabold mb-4 text-center
-      bg-gradient-to-r from-cyan-100 via-blue-100 to-purple-300
-      bg-clip-text text-transparent
-    ">
-              Diagnostyka komputerowa – odczyt błędów i parametrów rzeczywistych
-            </h2>
-
-            {/* LEAD */}
-            <p className="text-sm md:text-base text-white/80 mb-6 text-center">
-              Mobilna diagnostyka samochodowa oparta na{" "}
-              <span className="text-cyan-300 font-semibold">realnych danych z ECU</span>,
-              a nie zgadywaniu i wymianie części na ślepo.
-            </p>
-
-            <div className="space-y-6 text-sm md:text-base text-white/85">
-
-              {/* ZAKRES */}
-              <div>
-                <h3 className="font-semibold mb-2 flex items-center gap-2 text-cyan-300">
-                  <span className="w-2 h-2 rounded-full bg-cyan-400" />
-                  Zakres usługi (etap początkowy)
-                </h3>
-
-                <ul className="list-disc list-inside space-y-1 text-white/80">
-                  <li><span className="text-white">Odczyt błędów</span> sterownika silnika (ECU)</li>
-                  <li><span className="text-white">Kasowanie błędów</span> – jeśli usterka na to pozwala</li>
-                  <li><span className="text-white">Parametry rzeczywiste</span> podczas pracy silnika</li>
-                  <li><span className="text-white">Wstępna analiza</span> możliwej przyczyny problemu</li>
-                </ul>
-              </div>
-
-              {/* PARAMETRY */}
-              <div>
-                <h3 className="font-semibold mb-2 flex items-center gap-2 text-blue-300">
-                  <span className="w-2 h-2 rounded-full bg-blue-400" />
-                  Czym są parametry rzeczywiste?
-                </h3>
-
-                <p className="text-white/80">
-                  Są to dane odczytywane na żywo przez sterownik silnika, takie jak{" "}
-                  <span className="text-blue-300 font-semibold">korekty paliwowe</span>,{" "}
-                  <span className="text-blue-300 font-semibold">lambda</span>,{" "}
-                  <span className="text-blue-300 font-semibold">MAF</span>,{" "}
-                  <span className="text-blue-300 font-semibold">MAP</span>, temperatura,
-                  kąt zapłonu i pozycja przepustnicy.
-                </p>
-              </div>
-
-              {/* PRZYKŁAD */}
-              <div className="border-t border-white/10 pt-5">
-                <h3 className="font-semibold mb-3 flex items-center gap-2 text-purple-300">
-                  <span className="w-2 h-2 rounded-full bg-purple-400" />
-                  Przykład diagnostyki – wysoka lambda
-                </h3>
-
-                <p className="text-white/80 mb-3">
-                  <span className="text-purple-300 font-semibold">Objawy w parametrach:</span><br />
-                  – <span className="text-white">wysokie korekty paliwowe</span><br />
-                  – mieszanka uboga<br />
-                  – ECU wydłuża czas wtrysku
-                </p>
-
-                <p className="text-white/80">
-                  <span className="text-purple-300 font-semibold">Wniosek diagnostyczny:</span><br />
-                  Sterownik kompensuje problem, który bardzo często nie leży w sondzie,
-                  lecz w <span className="text-white">dolocie</span>,
-                  <span className="text-white"> MAF</span> lub
-                  <span className="text-white"> ciśnieniu paliwa</span>.
-                </p>
-              </div>
-
-              {/* STOPKA */}
-              <p className="text-center text-xs pt-4 text-white/60">
-                Diagnostyka to analiza danych – nie zgadywanie i niepotrzebna wymiana części.
-              </p>
-
-            </div>
-          </div>
-        </div>
 
 
-          </div>
+
+      </div>
 
 
 
 
-      </>
+    </>
   )
 }
 

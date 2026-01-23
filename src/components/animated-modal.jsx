@@ -172,7 +172,7 @@ const Overlay = ({
 const CloseIcon = () => {
   const { setOpen } = useModal();
   return (
-    <button onClick={() => setOpen(false)} className="absolute top-4 right-25 group">
+    <button onClick={() => setOpen(false)} className="absolute top-1 left-0 group">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="40"

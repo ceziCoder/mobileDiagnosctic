@@ -94,7 +94,7 @@ export const Main = () => {
 
 
 
-      <div className="relative min-h-screen w-full flex flex-col items-center overflow-x-hidden">
+      <div className="relative  min-h-screen w-full flex flex-col items-center overflow-x-hidden">
 
 
         <div className="fixed inset-0 -z-10">
@@ -233,7 +233,7 @@ export const Main = () => {
         </Modal>
         <div className="relative z-20 max-w-4xl mx-auto  px-6 py-6
   rounded-2xl
-  bg-black/60 backdrop-blur-lg
+  bg-black/30 backdrop-blur-xl
   border border-white/10
   text-white font-sans">
 

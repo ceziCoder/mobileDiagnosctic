@@ -313,7 +313,7 @@ export const Main = () => {
                         </p>
                       </div>
                       <h3 className="font-semibold mb-3 text-purple-100">
-                        kontakt : mobilnadiagnostyka@zoho.eu
+                        kontakt : mobilnadiagnostyka@zohomail.eu
                       </h3>
 
                       <p className="text-center text-md pt-4 text-red-400">

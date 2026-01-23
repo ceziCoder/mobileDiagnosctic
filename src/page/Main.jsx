@@ -94,7 +94,7 @@ export const Main = () => {
 
 
 
-      <div className="py-2 mx-5 flex flex-col items-center overflow-auto max-h-full">
+      <div className="py-0 mx-6 flex flex-col items-center overflow-auto max-h-full">
 
 
         <div className="fixed inset-0 -z-10">
@@ -233,7 +233,7 @@ export const Main = () => {
         </Modal>
         <div className="relative z-10 max-w-4xl mx-auto  px-6 py-6
   rounded-2xl
-  bg-black/60 backdrop-blur-md
+  bg-black/60 backdrop-blur-lg
   border border-white/10
   text-white font-sans">
 

@@ -233,7 +233,7 @@ export const Main = () => {
         </Modal>
         <div className="relative z-20 max-w-4xl mx-auto  px-6 py-6
   rounded-2xl
-  bg-black/30 backdrop-blur-xl
+  bg-black/30
   border border-white/10
   text-white font-sans">
 

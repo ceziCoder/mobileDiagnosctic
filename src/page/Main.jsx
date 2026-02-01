@@ -43,6 +43,12 @@ import i16 from '../public/16.png';
 import i17 from '../public/17.png';
 import i18 from '../public/18.png';
 import i19 from '../public/19.png';
+import i20 from '../public/20.png';
+import i21 from '../public/21.png';
+import i22 from '../public/22.png';
+import i23 from '../public/23.png';
+import i24 from '../public/24.png';
+import i25 from '../public/25.png';
 
 import { FaTools } from 'react-icons/fa';
 import { ColourfulText } from '../components/colourful-text.jsx';
@@ -55,7 +61,8 @@ const bgImages = [
   i1, i2, i3, i4, i5,
   i6, i7, i8, i9, i10,
   i11, i12, i13, i14, i15,
-  i16, i17, i18, i19,
+  i16, i17, i18, i19, i20,
+  i21, i22, i23, i24, i25
 ];
 
 
@@ -68,7 +75,7 @@ const useRandomImages = (count = 20) => {
       left: Math.random() * 100,
       rotate: Math.random() * 40 - 20,
       opacity: Math.random() * 0.2 + 0.6,
-      scale: Math.random() * 0.08 + 0.08,
+      scale: Math.random() * 0.03 + 0.08,
     }));
   }, [count]);
 };
@@ -89,7 +96,7 @@ const useRandomDTC = (count = 30) => {
       top: Math.random() * 100,
       left: Math.random() * 100,
       rotate: Math.random() * 40 - 20,
-      opacity: Math.random() * 0.1 + 0.5,
+      opacity: Math.random() * 0.1 + 0.2,
       scale: Math.random() * 0.1 + 0.7,
     }));
   }, []);
@@ -207,7 +214,7 @@ export const Main = () => {
                 scale: item.scale,
               }}
               animate={{
-                y: [0, -50, 0],
+                y: [0, -20, 0],
 
               }}
               transition={{

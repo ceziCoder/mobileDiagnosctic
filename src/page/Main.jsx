@@ -139,11 +139,11 @@ const images = [
   },
   {
     src: image10,
-    description: "Launch",
+    description: "Micsig",
   },
   {
     src: image11,
-    description: "Micsig",
+    description: "Launch",
   },
 ];
 

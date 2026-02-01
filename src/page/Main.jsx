@@ -239,7 +239,7 @@ export const Main = () => {
 
         <div className="  flex justify-center items-center  z-10  ">
           <h1 className="text-lg m-2  md:text-4xl lg:text-4xl font-bold text-center text-black relative z-2 font-sans">
-            <ColourfulText text="Mobilna diagnostyka samochodowa " /> <br />
+            <ColourfulText text="Klucze diagnostyka samochodowa " /> <br />
           </h1>
         </div>
 

@@ -24,6 +24,8 @@ import image4 from '../public/5-.jpg';
 import image5 from '../public/7-.jpg';
 import image8 from '../public/8.jpg';
 import image9 from '../public/9.jpg';
+import image10 from '../public/12.jpg';
+import image11 from '../public/13.jpg';
 import i1 from '../public/1.png';
 import i2 from '../public/2.png';
 import i3 from '../public/3.png';
@@ -134,6 +136,14 @@ const images = [
   {
     src: image1,
     description: "Launch",
+  },
+  {
+    src: image12,
+    description: "Launch",
+  },
+  {
+    src: image13,
+    description: "Micsig",
   },
 ];
 

@@ -404,7 +404,7 @@ export const Main = () => {
                         </p>
                       </div>
                       <h3 className="font-semibold mb-3 text-purple-100">
-                        kontakt : mobilnadiagnostyka@zohomail.eu
+                        kontakt : kluczediagnostyka@zohomail.eu
                       </h3>
 
                       <p className="text-center text-md pt-4 text-red-400">
@@ -508,7 +508,7 @@ export const Main = () => {
                     </div>
 
                     <h3 className="font-semibold mb-3 text-purple-100">
-                      kontakt: mobilnadiagnostyka@zohomail.eu
+                      kontakt: kluczediagnostyka@zohomail.eu
                     </h3>
 
                     <p className="text-center text-md pt-4 text-red-400">

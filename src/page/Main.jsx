@@ -138,11 +138,11 @@ const images = [
     description: "Launch",
   },
   {
-    src: image12,
+    src: image10,
     description: "Launch",
   },
   {
-    src: image13,
+    src: image11,
     description: "Micsig",
   },
 ];

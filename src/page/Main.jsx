@@ -72,10 +72,10 @@ const useRandomImages = (count = 20) => {
       id: i,
       src: bgImages[Math.floor(Math.random() * bgImages.length)],
       top: Math.random() * 100,
-      left: Math.random() * 100,
+      left: Math.random() * 110,
       rotate: Math.random() * 40 - 20,
-      opacity: Math.random() * 0.2 + 0.6,
-      scale: Math.random() * 0.03 + 0.08,
+      opacity: Math.random() * 0.4 + 0.6,
+      scale: Math.random() * 0.05 + 0.08,
     }));
   }, [count]);
 };
@@ -96,7 +96,7 @@ const useRandomDTC = (count = 30) => {
       top: Math.random() * 100,
       left: Math.random() * 100,
       rotate: Math.random() * 40 - 20,
-      opacity: Math.random() * 0.1 + 0.2,
+      opacity: Math.random() * 0.1 + 0.4,
       scale: Math.random() * 0.1 + 0.7,
     }));
   }, []);

@@ -24,11 +24,54 @@ import image4 from '../public/5-.jpg';
 import image5 from '../public/7-.jpg';
 import image8 from '../public/8.jpg';
 import image9 from '../public/9.jpg';
+import i1 from '../public/1.png';
+import i2 from '../public/2.png';
+import i3 from '../public/3.png';
+import i4 from '../public/4.png';
+import i5 from '../public/5.png';
+import i6 from '../public/6.png';
+import i7 from '../public/7.png';
+import i8 from '../public/8.png';
+import i9 from '../public/9.png';
+import i10 from '../public/10.png';
+import i11 from '../public/11.png';
+import i12 from '../public/12.png';
+import i13 from '../public/13.png';
+import i14 from '../public/14.png';
+import i15 from '../public/15.png';
+import i16 from '../public/16.png';
+import i17 from '../public/17.png';
+import i18 from '../public/18.png';
+import i19 from '../public/19.png';
+
 import { FaTools } from 'react-icons/fa';
 import { ColourfulText } from '../components/colourful-text.jsx';
 import { NoiseBackground1 } from "../components/noise-background1.jsx";
 import { NoiseBackground2 } from "../components/noise-background2.jsx";
 import { HoverBorderGradient } from '../components/hover-border-gradient.jsx';
+
+
+const bgImages = [
+  i1, i2, i3, i4, i5,
+  i6, i7, i8, i9, i10,
+  i11, i12, i13, i14, i15,
+  i16, i17, i18, i19,
+];
+
+
+const useRandomImages = (count = 20) => {
+  return useMemo(() => {
+    return Array.from({ length: count }).map((_, i) => ({
+      id: i,
+      src: bgImages[Math.floor(Math.random() * bgImages.length)],
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      rotate: Math.random() * 40 - 20,
+      opacity: Math.random() * 0.2 + 0.6,
+      scale: Math.random() * 0.08 + 0.08,
+    }));
+  }, [count]);
+};
 
 const DTC_CODES = [
   "P0100", "P0101", "P0171", "P0172",
@@ -46,8 +89,8 @@ const useRandomDTC = (count = 30) => {
       top: Math.random() * 100,
       left: Math.random() * 100,
       rotate: Math.random() * 40 - 20,
-      opacity: Math.random() * 0.4 + 0.3,
-      scale: Math.random() * 0.6 + 0.6,
+      opacity: Math.random() * 0.1 + 0.5,
+      scale: Math.random() * 0.1 + 0.7,
     }));
   }, []);
 };
@@ -90,6 +133,7 @@ const images = [
 export const Main = () => {
 
   const dtcItems = useRandomDTC(40);
+  const bgItems = useRandomImages(25);
   return (
     <>
 
@@ -146,6 +190,32 @@ export const Main = () => {
             >
               {item.code}
             </motion.div>
+          ))}
+        </div>
+        <div className="fixed inset-0 -z-5 pointer-events-none overflow-hidden">
+          {bgItems.map(item => (
+            <motion.img
+              key={item.id}
+              src={item.src}
+              alt=""
+              className="absolute select-none"
+              style={{
+                top: `${item.top}%`,
+                left: `${item.left}%`,
+                rotate: item.rotate,
+                opacity: item.opacity,
+                scale: item.scale,
+              }}
+              animate={{
+                y: [0, -50, 0],
+
+              }}
+              transition={{
+                duration: 8 + Math.random() * 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
           ))}
         </div>
 

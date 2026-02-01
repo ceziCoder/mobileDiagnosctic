@@ -54,6 +54,7 @@ import { FaTools } from 'react-icons/fa';
 import { ColourfulText } from '../components/colourful-text.jsx';
 import { NoiseBackground1 } from "../components/noise-background1.jsx";
 import { NoiseBackground2 } from "../components/noise-background2.jsx";
+import { NoiseBackground3 } from "../components/noise-background3.jsx";
 import { HoverBorderGradient } from '../components/hover-border-gradient.jsx';
 
 
@@ -231,6 +232,8 @@ export const Main = () => {
             <ColourfulText text="Mobilna diagnostyka samochodowa " /> <br />
           </h1>
         </div>
+
+                                          {/* FIRST MODAL*/}
         <Modal>
 
           <ModalTrigger className="bg-transparent  dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
@@ -307,6 +310,7 @@ export const Main = () => {
 
             </ModalContent>
           </ModalBody>
+                                       {/* SECOUND MODAL*/}
           <Modal>
             <ModalTrigger className="bg-transparent dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
               <div className='flex justify-center'>
@@ -321,7 +325,7 @@ export const Main = () => {
                   rounded-full
                   px-5 sm:px-6 py-1 text-sm
                    sm:py-2 sm:text-base  bg-black/50 text-white dark:bg-black dark:text-white">
-                  Usługa
+                  Diagnostyka
                 </button>
               </NoiseBackground2>
               </div>
@@ -405,8 +409,111 @@ export const Main = () => {
             </ModalBody>
           </Modal>
         </Modal>
+                                        {/* THIRD MODAL */}
+        <Modal>
+          <ModalTrigger className="bg-transparent dark:bg-white dark:text-black text-black flex justify-center group/modal-btn">
+            <div className='flex justify-center'>
+              <NoiseBackground3
+                containerClassName="w-fit md:p-4 rounded-full"
+                noiseIntensity={0.02}
+                speed={0.2}
+                backdropBlur={true}
+                animating={true}
+              >
+                <button className="   h-full w-full cursor-pointer
+                  rounded-full
+                  px-5 sm:px-6 py-1 text-sm
+                   sm:py-2 sm:text-base  bg-black/50 text-white dark:bg-black dark:text-white">
+                  Dorabianie kluczy
+                </button>
+              </NoiseBackground3>
+            </div>
+          </ModalTrigger>
+
+          <ModalBody className="overflow-hidden">
+            <ModalContent className="max-h-[90vh] overflow-y-auto px-4 py-6">
+
+              {/* KARTA */}
+              <div className="max-w-4xl mx-auto rounded-2xl border border-white/10 bg-black/60 backdrop-blur-sm">
+
+                <div className="px-6 py-6 text-white font-sans">
+
+                  <h2
+                    className="
+    text-2xl md:text-3xl font-extrabold mb-4 text-center
+    bg-gradient-to-r from-cyan-100 via-blue-100 to-purple-300
+    bg-clip-text text-transparent"
+                  >
+                    Dorabianie kluczy samochodowych – immobilizer i pilot
+                  </h2>
+
+                  <p className="text-sm md:text-base text-white/80 mb-6 text-center">
+                    Profesjonalne dorabianie i programowanie kluczy na{" "}
+                    <span className="text-cyan-300 font-semibold">oryginalnych danych immobilizera</span>,
+                    bez zgadywania i bez ryzyka blokady ECU.
+                  </p>
+
+                  <div className="space-y-6 text-sm md:text-base text-white/85">
+
+                    <div>
+                      <h3 className="font-semibold mb-2 text-cyan-300">
+                        Zakres usługi
+                      </h3>
+                      <ul className="list-disc list-inside space-y-1 text-white/80">
+                        <li><span className="text-white">Dorabianie kluczy</span> z immobilizerem</li>
+                        <li><span className="text-white">Programowanie pilota</span> centralnego zamka</li>
+                        <li><span className="text-white">Adaptacja transponderów</span> ID / PCF</li>
+                        <li><span className="text-white">Kasowanie zgubionych kluczy</span> z pamięci ECU</li>
+                        <li><span className="text-white">Obsługa OBD lub EEPROM</span> (jeśli wymagane)</li>
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h3 className="font-semibold mb-2 text-blue-300">
+                        Jakimi narzędziami pracuję?
+                      </h3>
+                      <p className="text-white/80">
+                        <span className="text-blue-300 font-semibold">Xhorse</span> – klucze, transpondery, EEPROM<br />
+                        <span className="text-blue-300 font-semibold">Launch</span> – programowanie kluczy OBD<br />
+                        <span className="text-blue-300 font-semibold">Autel</span> – IMMO, adaptacje, synchronizacje
+                      </p>
+                    </div>
+
+                    <div className="border-t border-white/10 pt-5">
+                      <h3 className="font-semibold mb-3 text-purple-300">
+                        Co jest potrzebne?
+                      </h3>
+
+                      <p className="text-white/80 mb-3">
+                        – sprawny kluczyk lub karta (jeśli dostępna)<br />
+                        – dokument potwierdzający własność pojazdu<br />
+                        – dostęp do pojazdu (mobilnie)
+                      </p>
+
+                      <p className="text-white/80">
+                        <span className="font-semibold text-purple-300">Uwaga:</span><br />
+                        W niektórych modelach wymagany jest odczyt pamięci
+                        (BCM / ECU / EZS) – informuję przed wykonaniem usługi.
+                      </p>
+                    </div>
+
+                    <h3 className="font-semibold mb-3 text-purple-100">
+                      kontakt: mobilnadiagnostyka@zohomail.eu
+                    </h3>
+
+                    <p className="text-center text-md pt-4 text-red-400">
+                      Klucze i immobilizer to dane – nie eksperymenty.
+                    </p>
+
+                  </div>
 
 
+                </div>
+              </div>
+
+            </ModalContent>
+          </ModalBody>
+        </Modal>
 
       </div>
 
